@@ -1,4 +1,4 @@
-package java_parts.interfaces;
+package java_parts.defined_interfaces;
 
 import org.apache.flink.api.common.functions.FoldFunction;
 import org.apache.flink.api.java.tuple.Tuple2;

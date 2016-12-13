@@ -13,3 +13,6 @@
 (defn from-collection [environment collection]
   "Adds a collction to a specific environment"
   (.fromCollection environment collection))
+
+(defn set-time-characteristic [environment characteristic]
+  (.setStreamTimeCharacteristic environment characteristic))
