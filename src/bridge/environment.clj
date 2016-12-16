@@ -9,7 +9,6 @@
   "Adds a data source to a specific environment"
   (.addSource environment source))
 
-
 (defn from-collection [environment collection]
   "Adds a collction to a specific environment"
   (.fromCollection environment collection))

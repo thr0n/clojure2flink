@@ -1,7 +1,13 @@
 (ns bridge.windowing
   (:import (org.apache.flink.streaming.api.windowing.time Time)))
 
-(defn time-size [time-object]
+(defn set-time-window
+  ([keyed-stream time-size]
+   (.timeWindow keyed-stream time-size))
+  ([keyed-stream time-size time-slide]
+   (.timeWindow keyed-stream time-size time-slide)))
+
+(defn get-time-size [time-object]
   (.getSize time-object))
 
 (defn get-unit [time-object]
