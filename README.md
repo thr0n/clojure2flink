@@ -4,6 +4,8 @@ A Clojure library designed to ... well, that part is up to you.
 
 ## Usage
 
+Download .jar and add it to the classpath of your project.
+
 FIXME
 
 ## License
