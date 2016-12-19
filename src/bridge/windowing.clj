@@ -2,33 +2,17 @@
   (:import (org.apache.flink.streaming.api.windowing.time Time)))
 
 (defn set-time-window
+  "Windows keyed stream into  tumbling or sliding time windows"
   ([keyed-stream time-size]
-   (.timeWindow keyed-stream time-size))
+   (.timeWindow keyed-stream time-size))                    ; tumbling windows
   ([keyed-stream time-size time-slide]
-   (.timeWindow keyed-stream time-size time-slide)))
+   (.timeWindow keyed-stream time-size time-slide)))        ; sliding window
 
-(defn get-time-size [time-object]
-  (.getSize time-object))
-
-(defn get-unit [time-object]
-  (.getUnit time-object))
-
-(defn to-millisec [time-object]
-  (.toMilliseconds time-object))
-
-(defn milliseconds [time-val]
-  (Time/milliseconds time-val))
-
-(defn seconds [time-val]
-  (Time/seconds time-val))
-
-(defn minutes [time-val]
-  (Time/minutes time-val))
-
-(defn hours [time-val]
-  (Time/hours time-val))
-
-(defn days [time-val]
-  (Time/days time-val))
+(defn set-count-window
+  "Windows keyed stream into tumbling or sliding count windows"
+  ([keyed-stream size]
+    (.countWindow keyed-stream size))                       ; tumbling window
+  ([keyed-stream size slide]
+    (.countWindow keyed-stream size slide)))                ; sliding window
 
 

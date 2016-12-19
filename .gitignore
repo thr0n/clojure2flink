@@ -21,4 +21,6 @@ pom.xml.asc
 /.nrepl-port
 .hgignore
 .hg/
-
+clojure2flink.iml
+/.idea/*
+*.rar
