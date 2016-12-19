@@ -17,9 +17,9 @@
 (defn add-socket-text-stream
   "Creates a new DataStream that contains the strings received infinitely from socket."
   ([hostname port]
-    (.socketTextStream hostname port))
+   (.socketTextStream hostname port))
   ([hostname port delimiter]
-    (.socketTextStream hostname port delimiter)))
+   (.socketTextStream hostname port delimiter)))
 
 (defn set-time-characteristic [environment characteristic]
   "Configures the event time using a given time characteristic"
@@ -37,9 +37,12 @@
   "Sets the time characteristik of a enviromnet to IngestionTime"
   (set-time-characteristic environment (TimeCharacteristic/IngestionTime)))
 
-(defn execute [environment]
+(defn execute
   "Starts the execution"
-  (.execute environment))
+  ([environment]
+   (.execute environment))
+  ([environment job-name]
+   (.execute environment job-name)))
 
 (defn set-auto-watermark-interval [environment interval]
   "Sets the interval of the automatic watermark emission."
