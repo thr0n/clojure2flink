@@ -1,5 +1,5 @@
-(ns bridge.timing
-  (:import (org.apache.flink.api.common.time Time)))
+(ns bridge.window-timing
+  (:import (org.apache.flink.streaming.api.windowing.time Time)))
 
 (defn get-time-size [time-object]
   (.getSize time-object))
