@@ -11,7 +11,7 @@
   (FlinkKafkaProducer09. broker-address topic serialization-schema))
 
 (defn assign-timestamp-and-watermarks [consumer assigner]
-  (.assignTimestampsAndWatermarks assigner))
+  (.assignTimestampsAndWatermarks consumer assigner))
 
 (defn create-properties [properties-vector]
   "Creates a java.util.Properties object. Property strings have to passed as a vector-of-vectors or as a list of list,
