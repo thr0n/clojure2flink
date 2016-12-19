@@ -4,7 +4,7 @@
   "Adds a the given sink (e. g. a Kafka Producer or a text file to the data stream."
   (.addSink stream sink))
 
-(defn print [stream]
+(defn print-stream [stream]
   "Prints the data stream to stdout"
   (.print stream))
 
