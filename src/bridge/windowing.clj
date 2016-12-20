@@ -23,7 +23,7 @@
   "Returns the unit of a time-object"
   (.getUnit time-object))
 
-(defn to-millisec [time-object]
+(defn to-milliseconds [time-object]
   "Converts a time object to milliseconds"
   (.toMilliseconds time-object))
 
