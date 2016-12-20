@@ -10,10 +10,16 @@
   (.map stream map-object))
 
 (defn apply-flat-map [stream flat-map-object]
+  "Applies a flat map function to the data stream. An object that implements org.apache.flink.api.common.functions.
+  FlatMapFunction is required"
   (.flatMap stream flat-map-object))
 
 (defn apply-filter [stream filter-object]
+  "Applies a filter function to the data stream. An object that implements org.apache.flink.api.common.functions.
+  FilterFunction is required"
   (.filter stream filter-object))
 
 (defn apply-window [stream window-object]
+  "Applies a window function to the data stream. An object that implements org.apache.flink.api.common.functions.
+  WindowFunction is required"
   (.apply stream window-object))
