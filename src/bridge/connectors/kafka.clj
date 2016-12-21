@@ -14,8 +14,8 @@
   (.assignTimestampsAndWatermarks consumer assigner))
 
 (defn create-properties [properties-vector]
-  "Creates a java.util.Properties object. Property strings have to passed as a vector-of-vectors or as a list of list,
-  e.g.: [[key1 value1] [key2 value2] ... ]"
+  "Creates a java.util.Properties object. Property strings have to be passed as a vector-of-vectors or as a list-oflists,
+  e.g.: [[key1 value1] [key2 value2]]"
   (loop [property-object (Properties.)
          remaining-proberties properties-vector]
     (if (empty? remaining-proberties)
