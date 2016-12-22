@@ -20,14 +20,14 @@ A Clojure library designed to ... well, that part is up to you.
 
 2) Add the functions you need using `:require` and `:refer` inside your namespace definition. Please see the example below:
 
-```lisp
+```clojure
 (ns demo.import-clojure2flink-functions
   (:require [bridge.environment :refer [stream-execution-environment ]])
 ```
 
 3) Use the imported function(s) in your Clojure application:
 
-```lisp
+```clojure
 (def exec-env (stream-execution-environment))
 ```
 
@@ -47,7 +47,7 @@ Replace the Generic Type `t` with some concrete value like `Integer`:
 
 2) Implement this newly created Java interface using a Clojure namespace. Use the `:name` key to assign an appropriate name to the `.class` file that will be created.
 
-```lisp
+```clojure
 (ns transformations.Clojured-FilterOddNumbers
   (:gen-class
     :implements [java_interfaces.I_FilterOddNumbers]
@@ -65,7 +65,7 @@ Replace the Generic Type `t` with some concrete value like `Integer`:
 
 6) Import `Clojured-FilterOddNumbers` into your namespace and use it to implement your use case.:
 
-```lisp
+```clojure
 (ns demo.import-clojure2flink-functions
   (:require [bridge.environment :refer [stream-execution-environment ]])
   (:import (transformations Clojured_OddFilter))
