@@ -34,15 +34,14 @@ A Clojure library designed to ... well, that part is up to you.
 ### How to use Flink's generic interfaces or classes
 
 1) Create a new `.java` file and implement the desired interface (e.g. `FilterFunction<T>`).
-Replace the Generic Type `t` with some concrete value like `Integer`:
+Replace the Generic Type `T` with some concrete value like `Integer`:
 
 ```java
-    package java_interfaces;
+package java_interfaces;
 
-    import org.apache.flink.api.common.functions.FilterFunction;
+import org.apache.flink.api.common.functions.FilterFunction;
 
-    public interface I_FilterOddNumbers extends FilterFunction<Integer>{
-    }
+public interface I_FilterOddNumbers extends FilterFunction<Integer>{}
 ```
 
 2) Implement this newly created Java interface using a Clojure namespace. Use the `:name` key to assign an appropriate name to the `.class` file that will be created.
@@ -63,7 +62,7 @@ Replace the Generic Type `t` with some concrete value like `Integer`:
 
 5) Run `lein compile`
 
-6) Import `Clojured-FilterOddNumbers` into your namespace and use it to implement your use case.:
+6) Import `transformations.Clojured-FilterOddNumbers` into your namespace and use it to implement your use case.:
 
 ```clojure
 (ns demo.import-clojure2flink-functions
