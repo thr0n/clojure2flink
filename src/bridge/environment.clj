@@ -17,10 +17,10 @@
 
 (defn add-socket-text-stream
   "Creates a new DataStream that contains the strings received infinitely from socket"
-  ([hostname port]
-   (.socketTextStream hostname port))
-  ([hostname port delimiter]
-   (.socketTextStream hostname port delimiter)))
+  ([environment hostname port]
+   (.socketTextStream environment hostname port))
+  ([environment hostname port delimiter]
+   (.socketTextStream environment hostname port delimiter)))
 
 (defn from-collection [environment collection]
   "Adds a collection (java.util.Collection) to a specific environment"

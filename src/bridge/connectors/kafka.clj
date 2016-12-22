@@ -13,15 +13,18 @@
 (defn assign-timestamp-and-watermarks [consumer assigner]
   (.assignTimestampsAndWatermarks consumer assigner))
 
-(defn create-properties [properties-vector]
-  "Creates a java.util.Properties object. Property strings have to be passed as a vector-of-vectors or as a list-oflists,
-  e.g.: [[key1 value1] [key2 value2]]"
-  (loop [property-object (Properties.)
-         remaining-proberties properties-vector]
-    (if (empty? remaining-proberties)
-      property-object
-      (let [[current & remaining] remaining-proberties
-            [key value] current]
-        (.setProperty property-object key value)
-        (recur property-object remaining)))))
-
+(defn create-properties
+  ([]
+   "Creates an 'empty' java.util.Properties object using the default constructor."
+   (Properties.))
+  ([properties-vector]
+   "Creates a java.util.Properties object. Property strings have to be passed as a vector-of-vectors or as a
+   list-of-lists, e.g.: [[key1 value1] [key2 value2]]"
+   (loop [property-object (Properties.)
+          remaining-proberties properties-vector]
+     (if (empty? remaining-proberties)
+       property-object
+       (let [[current & remaining] remaining-proberties
+             [key value] current]
+         (.setProperty property-object key value)
+         (recur property-object remaining))))))
