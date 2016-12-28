@@ -23,5 +23,4 @@
 (deftest test-add-collection
   (let [collection (list 1 2 3)
         env (from-collection test-environment collection)]
-    (println collection)
     (is (= (instance? DataStreamSource env) true))))
