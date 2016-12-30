@@ -30,12 +30,14 @@ Yet there is no guarantee that clojure2flink will work using any other versions.
 ## Available features
 
 - Create and configure a Flink `StreamExecutionEnvironment`
-- Add a custom `DataSource`, a text file, a `java.util.Collection` or Socket Text Stream to your environment
-- Print your Stream to `stdout` or into a text- or csv-file.
-- Apply transformations on your data stream like `MapFunction`, `FlatMapFunction` or `FilterFunction`.
-- Key your stream using a `KeySelector`.
-- Make use of the `FlinkKafkaConsumer09` and the `FlinkKafkaProducer09`. Perform read and write operations on
-Kafka clusters!
+- Add a custom `DataSource`, a text file, a `java.util.Collection` or Socket Text
+Stream to your environment
+- Print your Stream to `stdout` or into a text- or csv-file
+- Apply transformations on your data stream like `MapFunction`, `FlatMapFunction`
+or `FilterFunction`
+- Key your stream using a `KeySelector`
+- Make use of the `FlinkKafkaConsumer09` and the `FlinkKafkaProducer09`. Perform
+read and write operations on Kafka clusters
 - Execute your Flink jobs
 
 ## Usage
