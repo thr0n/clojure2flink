@@ -10,7 +10,7 @@ To see this bridge in action take a look at my example use case
 Until now there are only a couple of features of Flink's
 [DataStream API](https://ci.apache.org/projects/flink/flink-docs-release-1.1/apis/streaming/index.html) ready to be
 used in a Clojure application. So, yes, there are still plenty of functionalities that could be considered
-(Not to mention the DataSet API and all that libraries).
+(not to mention the DataSet API and all those libraries).
 
 So it should be no surprise that clojure2flink ist still under development.
 But for testing reasons it is already available as a [Clojar](https://clojars.org/clojure2flink)!
@@ -61,12 +61,12 @@ below:
 ### How to use Flink's generic interfaces or classes
 
 Due to Clojure's missing support of Java Generics we unfortunately need to fall back on the following Java detour
-(For further details see e.g. this [post](http://stackoverflow.com/a/3770360/7047542) from Chas Emerick on
+(for further details see e.g. this [post](http://stackoverflow.com/a/3770360/7047542) from Chas Emerick on
 StackOverflow, the author of "Clojure programming"):
 
 1) Create a new `.java` file and implement the desired interface (e.g. `FilterFunction<T>`).
-Replace the Generic Type `T` with some concrete value such as `Integer`. It's highly recommended to store these and other "dummy-interfaces" in the same package. The package should be 
-exclusivly used for this purpose as well!
+Replace the Generic Type `T` with some concrete value such as `Integer`. It's highly recommended to store these and other 'dummy-interfaces' in the same package. The package should be
+exclusively used for this purpose as well!
 
 ```java
 package java_interfaces;
@@ -102,7 +102,7 @@ vector of your Leiningen project file.
 5) Run `lein compile`
 
 6) Import `transformations.Clojured-FilterOddNumbers` into the namespace of your Flink job and use it to implement
-your use case.:
+your use case:
 
 ```clojure
 (ns demo.import-clojure2flink-functions
