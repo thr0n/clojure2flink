@@ -65,8 +65,8 @@ Due to Clojure's missing support of Java Generics we unfortunately need to fall 
 StackOverflow, the author of "Clojure programming"):
 
 1) Create a new `.java` file and implement the desired interface (e.g. `FilterFunction<T>`).
-Replace the Generic Type `T` with some concrete value such as `Integer`. It's highly recommended to store these and
-the other
+Replace the Generic Type `T` with some concrete value such as `Integer`. It's highly recommended to store these and other "dummy-interfaces" in the same package. The package should be 
+exclusivly used for this purpose as well!
 
 ```java
 package java_interfaces;
