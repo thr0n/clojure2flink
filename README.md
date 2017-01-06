@@ -14,7 +14,7 @@ used in a Clojure application. So, yes, there are still plenty of functionalitie
 
 So it should be no surprise that clojure2flink ist still under development.
 But for testing reasons it is already available as a [Clojar](https://clojars.org/clojure2flink)!
-The current version is `0.1.0-SNAPSHOT`.
+The current version is `0.1.1-SNAPSHOT`.
 
 ## Prerequisites and remarks
 

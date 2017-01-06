@@ -32,19 +32,23 @@
 
 (defn set-time-characteristic [environment characteristic]
   "Configures the event time using a given time characteristic"
-  (.setStreamTimeCharacteristic environment characteristic))
+  (.setStreamTimeCharacteristic environment characteristic)
+  environment)
 
 (defn use-event-time [environment]
   "Sets the time characteristik of a enviromnet to EventTime"
-  (set-time-characteristic environment (TimeCharacteristic/EventTime)))
+  (set-time-characteristic environment (TimeCharacteristic/EventTime))
+  environment)
 
 (defn use-processing-time [environment]
   "Sets the time characteristik of a enviromnet to ProcessingTime"
-  (set-time-characteristic environment (TimeCharacteristic/ProcessingTime)))
+  (set-time-characteristic environment (TimeCharacteristic/ProcessingTime))
+  environment)
 
 (defn use-ingestion-time [environment]
   "Sets the time characteristik of a enviromnet to IngestionTime"
-  (set-time-characteristic environment (TimeCharacteristic/IngestionTime)))
+  (set-time-characteristic environment (TimeCharacteristic/IngestionTime))
+  environment)
 
 (defn execute
   "Starts the execution of the Flink job"
@@ -55,4 +59,5 @@
 
 (defn set-auto-watermark-interval [environment interval]
   "Sets the interval of the automatic watermark emission"
-  (.setAutoWatermarkInterval (.getConfig environment) interval))
+  (.setAutoWatermarkInterval (.getConfig environment) interval)
+  environment)

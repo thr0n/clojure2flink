@@ -1,6 +1,7 @@
 (ns bridge.environment-test
   (:use clojure.test)
-  (:require [bridge.environment :refer [stream-execution-environment add-text-file add-socket-text-stream from-collection]])
+  (:require [bridge.environment :refer [stream-execution-environment add-text-file add-socket-text-stream
+                                        from-collection use-event-time set-auto-watermark-interval]])
   (:import (org.apache.flink.streaming.api.environment StreamExecutionEnvironment LocalStreamEnvironment)
            (org.apache.flink.streaming.api.datastream DataStreamSource)))
 
@@ -24,3 +25,9 @@
   (let [collection (list 1 2 3)
         env (from-collection test-environment collection)]
     (is (= (instance? DataStreamSource env) true))))
+
+(deftest use-event-time-returns-not-nil
+  (not (= nil (use-event-time test-environment))))
+
+(deftest auto-watermark-returns-not-nil
+  (not (= nil (set-auto-watermark-interval test-environment 1))))
