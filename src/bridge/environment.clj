@@ -36,17 +36,17 @@
   environment)
 
 (defn use-event-time [environment]
-  "Sets the time characteristik of a enviromnet to EventTime"
+  "Sets the time characteristik of an environment to EventTime"
   (set-time-characteristic environment (TimeCharacteristic/EventTime))
   environment)
 
 (defn use-processing-time [environment]
-  "Sets the time characteristik of a enviromnet to ProcessingTime"
+  "Sets the time characteristik of an environment to ProcessingTime"
   (set-time-characteristic environment (TimeCharacteristic/ProcessingTime))
   environment)
 
 (defn use-ingestion-time [environment]
-  "Sets the time characteristik of a enviromnet to IngestionTime"
+  "Sets the time characteristik of an environment to IngestionTime"
   (set-time-characteristic environment (TimeCharacteristic/IngestionTime))
   environment)
 

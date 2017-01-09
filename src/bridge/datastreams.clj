@@ -1,7 +1,7 @@
 (ns bridge.datastreams)
 
 (defn add-sink [stream sink]
-  "Adds a the given sink (e. g. a Kafka Producer or a text file to the data stream"
+  "Adds a the given sink (e. g. a Kafka Producer or a text file) to the data stream"
   (.addSink stream sink))
 
 (defn print-stream [stream]
