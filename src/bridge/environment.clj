@@ -10,32 +10,25 @@
   ([environment path]
    "Reads text files, i.e. files that respect the TextInputFormat specification, line-by-line and returns them
    as Strings"
-   (.readTextFile environment path)
-   environment)
+   (.readTextFile environment path))
   ([environment path input-file-format]
    "Reads (once) files as dictated by the specified file input format"
-   (.readTextFile environment input-file-format path)
-   environment))
+   (.readTextFile environment input-file-format path)))
 
 (defn add-socket-text-stream
   "Creates a new DataStream that contains the strings received infinitely from socket"
   ([environment hostname port]
-   (.socketTextStream environment hostname port)
-   (println (class environment))
-   environment)
+   (.socketTextStream environment hostname port))
   ([environment hostname port delimiter]
-   (.socketTextStream environment hostname port delimiter)
-   environment))
+   (.socketTextStream environment hostname port delimiter)))
 
 (defn from-collection [environment collection]
   "Adds a collection (java.util.Collection) to a specific environment"
-  (.fromCollection environment collection)
-  environment)
+  (.fromCollection environment collection))
 
 (defn add-source [environment source]
   "Adds a data source to a specific environment"
-  (.addSource environment source)
-  environment)
+  (.addSource environment source))
 
 (defn set-time-characteristic [environment characteristic]
   "Configures the event time using a given time characteristic"
