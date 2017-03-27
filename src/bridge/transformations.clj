@@ -23,3 +23,8 @@
   "Applies a window function to the data stream. An object that implements org.apache.flink.api.common.functions.
   WindowFunction is required"
   (.apply stream window-object))
+
+(defn apply-reduce [stream reduce-object]
+  "Applies a reduce function to the data stream. An object that implements org.apache.flink.api.common.functions.
+  ReduceFunction is required"
+  (.reduce stream reduce-object))

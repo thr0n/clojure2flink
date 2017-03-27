@@ -1,4 +1,4 @@
-(defproject clojure2flink "0.1.1-SNAPSHOT"
+(defproject clojure2flink "0.1.2-SNAPSHOT"
   :description "A Clojure bridge to Apache Flink."
   :url "https://github.com/thr0n/clojure2flink"
   :license {:name "Apache License, Version 2.0"
